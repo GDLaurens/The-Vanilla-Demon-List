@@ -25,7 +25,7 @@ export default {
                 <table class="list" v-if="list">
                     <tr v-for="([level, err], i) in list">
                         <td class="rank">
-                            <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-if="i + 1 <= 75" class="type-label-lg">#{{ i + 1 }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
                         <td class="level" :class="{ 'active': selected == i, 'error': !level }">
@@ -57,7 +57,7 @@ export default {
                     </ul>
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected +1 <= 150"><strong>100%</strong> or better to qualify</p>
+                    <p v-else-if="selected + 1 <= 150"><strong>100%</strong> or better to qualify</p>
                     <p v-else>This level does not accept new records.</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
@@ -98,31 +98,37 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3>Submission Requirements</h3>
-                    <p>
-                        Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
-                    </p>
-                    <p>
-                        Achieved the record on the level that is listed on the site - please check the level ID before you submit a record
-                    </p>
-                    <p>
-                        Have either source audio or clicks/taps in the video. Edited audio only does not count
-                    </p>
-                    <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this
-                    </p>
-                    <p>
-                        The recording must also show the player hit the endwall, or the completion will be invalidated.
-                    </p>
-                    <p>
-                        Do not use secret routes or bug routes
-                    </p>
-                    <p>
-                        Do not use easy modes, only a record of the unmodified level qualifies
-                    </p>
-                    <p>
-                        Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
-                    </p>
+
+                    <h3>The Vanilla Demon List</h3>
+                    <p class="type-label-md">Official Rulebook – Version 1.0</p>
+                    <hr>
+
+                    <h4>1. Overview</h4>
+                    <p>The VDL ranks the hardest demons completed on the official, unmodified Geometry Dash client. No external modifications or tools are permitted.</p>
+
+                    <h4>2. Client Requirements</h4>
+                    <ul>
+                        <li>Official Steam release only.</li>
+                        <li>Default game physics.</li>
+                        <li><strong>Prohibited:</strong> MegaHack, Geode, DLL injection, Clickbots, Macros, Startpos Switcher, Texture Packs, and Overlays.</li>
+                    </ul>
+
+                    <h4>3. Allowed Features</h4>
+                    <ul>
+                        <li>Built-in FPS Bypass & CBF.</li>
+                        <li>Practice Music Sync (In-game).</li>
+                        <li>Standard 16:9 or 16:10 resolutions.</li>
+                    </ul>
+
+                    <h4>4. FPS & CBF Policy</h4>
+                    <p>Built-in CBF is permitted <strong>ONLY</strong> for players running below 120 FPS. Players at or above 120 FPS must disable it.</p>
+
+                    <h4>5. Proof Requirements</h4>
+                    <p>Full, uncut footage with <strong>audible clicks/taps</strong> is required.</p>
+                    <p><strong>Post-Completion Evidence:</strong> You must show in-game settings, close the game to show the file directory (proving no DLLs like Geode exist), and re-launch via Steam in one continuous shot.</p>
+
+                    <h4>6. Philosophy</h4>
+                    <p>The VDL is pro-vanilla competition, measuring skill under official conditions only.</p>
                 </div>
             </div>
         </main>
@@ -153,22 +159,16 @@ export default {
         },
     },
     async mounted() {
-        // Hide loading spinner
         this.list = await fetchList();
         this.editors = await fetchEditors();
 
-        // Error handling
         if (!this.list) {
-            this.errors = [
-                "Failed to load list. Retry in a few minutes or notify list staff.",
-            ];
+            this.errors = ["Failed to load list. Retry in a few minutes or notify list staff."];
         } else {
             this.errors.push(
                 ...this.list
                     .filter(([_, err]) => err)
-                    .map(([_, err]) => {
-                        return `Failed to load level. (${err}.json)`;
-                    })
+                    .map(([_, err]) => `Failed to load level. (${err}.json)`)
             );
             if (!this.editors) {
                 this.errors.push("Failed to load list editors.");
