@@ -11,6 +11,7 @@ const scale = 3;
  * @returns {Number}
  */
 export function score(rank, percent, minPercent) {
+    // Rank 151+ or Legacy levels (76-150) with less than 100% give 0 points
     if (rank > 150) {
         return 0;
     }
@@ -18,17 +19,21 @@ export function score(rank, percent, minPercent) {
         return 0;
     }
 
-    // Old formula
-    /*
-    let score = (100 / Math.sqrt((rank - 1) / 50 + 0.444444) - 50) *
-        ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
-    */
-    // New formula
-    let score = (-24.9975*Math.pow(rank-1, 0.4) + 200) *
-        ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+    let score;
+
+    // Check if the level is in the Top 75
+    if (rank <= 75) {
+        // All Top 75 levels give a base of 350 points
+        score = 350 * ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+    } else {
+        // Standard formula for levels 76-150 (Legacy)
+        score = (-24.9975 * Math.pow(rank - 1, 0.4) + 200) *
+            ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+    }
 
     score = Math.max(0, score);
 
+    // Apply penalty for non-100% completions
     if (percent != 100) {
         return round(score - score / 3);
     }
@@ -36,6 +41,11 @@ export function score(rank, percent, minPercent) {
     return Math.max(round(score), 0);
 }
 
+/**
+ * Rounds numbers to the defined scale accurately
+ * @param {Number} num 
+ * @returns {Number}
+ */
 export function round(num) {
     if (!('' + num).includes('e')) {
         return +(Math.round(num + 'e+' + scale) + 'e-' + scale);
