@@ -103,8 +103,8 @@ export default {
                     <p class="type-label-md">Official Rulebook – Version 1.0</p>
                     <hr>
 
-                    <p class="type-label-md" style="color: #eb3434; font-weight: bold; margin: 15px 0;">
-                        These are only the main rules; to view the full rules, please look in the rules channel in our Discord server.
+                    <p class="type-label-md" style="color: #eb3434; font-weight: bold; margin: 5px 0;">
+                        These are only the main rules, to view the full rules please look in the rules channel in our Discord server.
                     </p>
 
                     <h4 class="type-title-sm">1. Overview</h4>
