@@ -103,6 +103,10 @@ export default {
                     <p class="type-label-md">Official Rulebook – Version 1.0</p>
                     <hr>
 
+                    <p class="type-label-md" style="color: #eb3434; font-weight: bold; margin: 15px 0;">
+                        These are only the main rules; to view the full rules, please look in the rules channel in our Discord server.
+                    </p>
+
                     <h4 class="type-title-sm">1. Overview</h4>
                     <p class="type-label-md">The VDL ranks the hardest demons completed on the official, unmodified Geometry Dash client. No external modifications or tools are permitted.</p>
 
