@@ -101,9 +101,9 @@ export default {
 
                     <h3 class="type-title-sm">The Vanilla Demon List</h3>
                     <p class="type-label-md">Official Rulebook – Version 1.0</p>
-                    <hr>
+                    <hr style="margin-bottom: 5px;">
 
-                    <p class="type-label-md" style="color: #eb3434; font-weight: bold; margin: 5px 0;">
+                    <p class="type-label-md" style="color: #eb3434; font-weight: bold; margin-top: 0; margin-bottom: 10px;">
                         These are only the main rules, to view the full rules please look in the rules channel in our Discord server.
                     </p>
 
