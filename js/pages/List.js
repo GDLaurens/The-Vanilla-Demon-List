@@ -44,25 +44,25 @@ export default {
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Points when completed</div>
-                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                            <p class="type-label-lg">{{ score(selected + 1, 100, level.percentToQualify) }}</p>
                         </li>
                         <li>
                             <div class="type-title-sm">ID</div>
-                            <p>{{ level.id }}</p>
+                            <p class="type-label-lg">{{ level.id }}</p>
                         </li>
                         <li>
                             <div class="type-title-sm">Password</div>
-                            <p>{{ level.password || 'Free to Copy' }}</p>
+                            <p class="type-label-lg">{{ level.password || 'Free to Copy' }}</p>
                         </li>
                     </ul>
                     <h2>Records</h2>
-                    <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected + 1 <= 150"><strong>100%</strong> or better to qualify</p>
-                    <p v-else>This level does not accept new records.</p>
+                    <p class="type-label-md" v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
+                    <p class="type-label-md" v-else-if="selected + 1 <= 150"><strong>100%</strong> or better to qualify</p>
+                    <p class="type-label-md" v-else>This level does not accept new records.</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
                             <td class="percent">
-                                <p>{{ record.percent }}%</p>
+                                <p class="type-label-lg">{{ record.percent }}%</p>
                             </td>
                             <td class="user">
                                 <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
@@ -71,64 +71,64 @@ export default {
                                 <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store.dark ? '-dark' : ''}.svg\`" alt="Mobile">
                             </td>
                             <td class="hz">
-                                <p>{{ record.hz }}Hz</p>
+                                <p class="type-label-lg">{{ record.hz }}Hz</p>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
-                    <p>(ノಠ益ಠ)ノ彡┻━┻</p>
+                    <p class="type-label-lg">(ノಠ益ಠ)ノ彡┻━┻</p>
                 </div>
             </div>
             <div class="meta-container">
                 <div class="meta">
                     <div class="errors" v-show="errors.length > 0">
-                        <p class="error" v-for="error of errors">{{ error }}</p>
+                        <p class="error type-label-sm" v-for="error of errors">{{ error }}</p>
                     </div>
                     <div class="og">
                         <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev/" target="_blank">TheShittyList</a></p>
                     </div>
                     <template v-if="editors">
-                        <h3>List Editors</h3>
+                        <h3 class="type-title-sm">List Editors</h3>
                         <ol class="editors">
                             <li v-for="editor in editors">
                                 <img :src="\`/assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">
                                 <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
-                                <p v-else>{{ editor.name }}</p>
+                                <p v-else class="type-label-lg">{{ editor.name }}</p>
                             </li>
                         </ol>
                     </template>
 
-                    <h3>The Vanilla Demon List</h3>
+                    <h3 class="type-title-sm">The Vanilla Demon List</h3>
                     <p class="type-label-md">Official Rulebook – Version 1.0</p>
                     <hr>
 
-                    <h4>1. Overview</h4>
-                    <p>The VDL ranks the hardest demons completed on the official, unmodified Geometry Dash client. No external modifications or tools are permitted.</p>
+                    <h4 class="type-title-sm">1. Overview</h4>
+                    <p class="type-label-md">The VDL ranks the hardest demons completed on the official, unmodified Geometry Dash client. No external modifications or tools are permitted.</p>
 
-                    <h4>2. Client Requirements</h4>
-                    <ul>
+                    <h4 class="type-title-sm">2. Client Requirements</h4>
+                    <ul class="type-label-md">
                         <li>Official Steam release only.</li>
                         <li>Default game physics.</li>
                         <li><strong>Prohibited:</strong> MegaHack, Geode, DLL injection, Clickbots, Macros, Startpos Switcher, Texture Packs, and Overlays.</li>
                     </ul>
 
-                    <h4>3. Allowed Features</h4>
-                    <ul>
+                    <h4 class="type-title-sm">3. Allowed Features</h4>
+                    <ul class="type-label-md">
                         <li>Built-in FPS Bypass & CBF.</li>
                         <li>Practice Music Sync (In-game).</li>
                         <li>Standard 16:9 or 16:10 resolutions.</li>
                     </ul>
 
-                    <h4>4. FPS & CBF Policy</h4>
-                    <p>Built-in CBF is permitted <strong>ONLY</strong> for players running below 120 FPS. Players at or above 120 FPS must disable it.</p>
+                    <h4 class="type-title-sm">4. FPS & CBF Policy</h4>
+                    <p class="type-label-md">Built-in CBF is permitted <strong>ONLY</strong> for players running below 120 FPS. Players at or above 120 FPS must disable it.</p>
 
-                    <h4>5. Proof Requirements</h4>
-                    <p>Full, uncut footage with <strong>audible clicks/taps</strong> is required.</p>
-                    <p><strong>Post-Completion Evidence:</strong> You must show in-game settings, close the game to show the file directory (proving no DLLs like Geode exist), and re-launch via Steam in one continuous shot.</p>
+                    <h4 class="type-title-sm">5. Proof Requirements</h4>
+                    <p class="type-label-md">Full, uncut footage with <strong>audible clicks/taps</strong> is required.</p>
+                    <p class="type-label-md"><strong>Post-Completion Evidence:</strong> You must show in-game settings, close the game to show the file directory, and re-launch via Steam in one continuous shot.</p>
 
-                    <h4>6. Philosophy</h4>
-                    <p>The VDL is pro-vanilla competition, measuring skill under official conditions only.</p>
+                    <h4 class="type-title-sm">6. Philosophy</h4>
+                    <p class="type-label-md">The VDL is pro-vanilla competition, measuring skill under official conditions only.</p>
                 </div>
             </div>
         </main>
@@ -144,13 +144,13 @@ export default {
     }),
     computed: {
         level() {
-            return this.list[this.selected][0];
+            return this.list[this.selected] ? this.list[this.selected][0] : null;
         },
         video() {
+            if (!this.level || !this.level.verification) return "";
             if (!this.level.showcase) {
                 return embed(this.level.verification);
             }
-
             return embed(
                 this.toggledShowcase
                     ? this.level.showcase
