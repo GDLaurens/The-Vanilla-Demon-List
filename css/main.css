@@ -3,7 +3,9 @@
     --color-on-background: black;
     --color-background-hover: #eee;
     --color-on-background-hover: black;
-    --color-primary: #FFFFFF;
+    /* Changed from #FFFFFF to #F5F5F5 so white text is visible, 
+       or you can use a brand color like #2563eb */
+    --color-primary: #1a1a1a; 
     --color-on-primary: white;
     --color-error: #de0000;
     --color-on-error: white;
@@ -40,7 +42,7 @@ main {
     color: var(--color-on-background);
     display: grid;
     grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 2fr) minmax(
-            16em,
+            16rem,
             1fr
         );
     column-gap: 2rem;
@@ -53,12 +55,14 @@ header {
     background-color: var(--color-primary);
     color: var(--color-on-primary);
 }
+
 @media screen and (min-width: 1366px) {
     header {
         display: grid;
         padding-inline: 0;
     }
 }
+
 header .logo {
     justify-self: end;
     align-self: center;
@@ -66,6 +70,7 @@ header .logo {
     align-items: flex-end;
     gap: 1rem;
 }
+
 header .nav {
     flex: 1;
 }
@@ -77,6 +82,7 @@ main {
     grid-template-rows: minmax(0, 1fr);
     column-gap: 2rem;
 }
+
 main > div {
     overflow-y: auto;
 }
