@@ -1,16 +1,16 @@
 {
     "id": 34085027,
-    "name": "B",
-    "author": "motleyorc",
-    "creators": ["Motleyorc, ScorchVX"],
-    "verifier": "Whatgames",
-    "verification": "https://www.youtube.com/watch?v=6z2Kmb0A5WU",
+    "name": "Sakupen Egg",
+    "author": "Sivlol",
+    "creators": ["Grayfuse, Socksal, Soverign"],
+    "verifier": "F1L1P1N",
+    "verification": "https://www.youtube.com/watch?v=SL2bvwJne5g",
     "percentToQualify": 56,
     "password": "030303",
     "records": [
         {
-            "user": "Sample_Victor_1",
-            "link": "https://www.youtube.com/watch?v=MgJeijBGKHU",
+            "user": "None",
+            "link": "",
             "percent": 100,
             "hz": 240
         }
