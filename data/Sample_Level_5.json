@@ -1,1 +1,18 @@
-
+{
+    "id": 7116121,
+    "name": "Problematic",
+    "author": "Dhafin",
+    "creators": ["Dhafin"],
+    "verifier": "Priximity",
+    "verification": "https://www.youtube.com/watch?v=uglbgD6K8lY",
+    "percentToQualify": 50,
+    "password": "006701",
+    "records": [
+        {
+            "user": "Sample_Victor_1",
+            "link": "https://www.youtube.com/watch?v=MgJeijBGKHU",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
