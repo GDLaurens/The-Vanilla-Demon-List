@@ -100,14 +100,14 @@ export default {
                     </template>
 
                     <h3 class="type-title-sm">The Vanilla Demon List</h3>
-                    <p class="type-label-md">Official Rulebook – Version 1.0</p>
-                    <hr style="margin-bottom: 5px;">
+                    <p class="type-label-md" style="margin-bottom: 0;">Official Rulebook – Version 1.0</p>
+                    <hr style="margin: 2px 0;">
 
-                    <p class="type-label-md" style="color: #eb3434; font-weight: bold; margin-top: 0; margin-bottom: 10px;">
+                    <p class="type-label-md" style="color: #eb3434; font-weight: bold; margin: 0;">
                         These are only the main rules, to view the full rules please look in the rules channel in our Discord server.
                     </p>
 
-                    <h4 class="type-title-sm">1. Overview</h4>
+                    <h4 class="type-title-sm" style="margin-top: 15px;">1. Overview</h4>
                     <p class="type-label-md">The VDL ranks the hardest demons completed on the official, unmodified Geometry Dash client. No external modifications or tools are permitted.</p>
 
                     <h4 class="type-title-sm">2. Client Requirements</h4>
