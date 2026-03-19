@@ -1,1 +1,18 @@
-
+{
+    "id": 6939821,
+    "name": "Jawbreaker",
+    "author": "ZenthicAlpha",
+    "creators": ["ZenthicAlpha"],
+    "verifier": "ZenthicAlpha",
+    "verification": "https://www.youtube.com/watch?v=7lsLVVujIvg&list=RD7lsLVVujIvg&start_radio=1",
+    "percentToQualify": 50,
+    "password": "696969",
+    "records": [
+        {
+            "user": "None",
+            "link": "https://www.youtube.com/watch?v=MgJeijBGKHU",
+            "percent": 100,
+            "hz": 240
+        }
+    ]
+}
