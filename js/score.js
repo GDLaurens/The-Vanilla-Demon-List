@@ -19,26 +19,32 @@ export function score(rank, percent, minPercent) {
         return 0;
     }
 
-    let score;
+    let baseScore;
+    const maxPoints = 350;
+    const dropPerRank = 35; // 10% of 350
 
-    // Check if the level is in the Top 75
     if (rank <= 75) {
-        // All Top 75 levels give a base of 350 points
-        score = 350 * ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+        // Linear drop logic:
+        // Rank 1: 350 - (0 * 35) = 350
+        // Rank 2: 350 - (1 * 35) = 315
+        // Rank 3: 350 - (2 * 35) = 280
+        // We use Math.max(50, ...) so that levels below Rank 9 don't hit 0 or negative points.
+        baseScore = Math.max(50, maxPoints - ((rank - 1) * dropPerRank));
     } else {
-        // Standard formula for levels 76-150 (Legacy)
-        score = (-24.9975 * Math.pow(rank - 1, 0.4) + 200) *
-            ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+        // Standard flat score for Legacy levels (76-150)
+        baseScore = 25;
     }
 
-    score = Math.max(0, score);
+    // Calculate score based on the percentage achieved
+    let currentScore = baseScore * ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
+    currentScore = Math.max(0, currentScore);
 
-    // Apply penalty for non-100% completions
+    // Apply the standard 33% penalty for non-100% completions
     if (percent != 100) {
-        return round(score - score / 3);
+        return round(currentScore - currentScore / 3);
     }
 
-    return Math.max(round(score), 0);
+    return Math.max(round(currentScore), 0);
 }
 
 /**
