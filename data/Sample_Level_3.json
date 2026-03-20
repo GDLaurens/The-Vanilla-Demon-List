@@ -2,10 +2,13 @@
     "id": 34085027,
     "name": "B",
     "author": "motleyorc",
-    "creators": ["Motleyorc, ScorchVX"],
+    "creators": [
+        "Motleyorc",
+        "ScorchVX"
+    ],
     "verifier": "Whatgames",
     "verification": "https://www.youtube.com/watch?v=6z2Kmb0A5WU",
-    "percentToQualify": "100",
+    "percentToQualify": 100,
     "password": "030303",
-    "records": [
-        {
+    "records": []
+}
