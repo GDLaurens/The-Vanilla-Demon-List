@@ -2,10 +2,12 @@
     "id": 4284013,
     "name": "Nine Circles",
     "author": "Zobros",
-    "creators": ["Zobros"],
+    "creators": [
+        "Zobros"
+    ],
     "verifier": "Zobros",
-    "verification": "https://www.youtube.com/watch?v=4WCgpSYz-ug&list=RD4WCgpSYz-ug&start_radio=1",
+    "verification": "https://www.youtube.com/watch?v=4WCgpSYz-ug",
     "percentToQualify": 56,
     "password": "121214",
-    "records": [
-        {
+    "records": []
+}
