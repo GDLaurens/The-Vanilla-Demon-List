@@ -2,10 +2,12 @@
     "id": 4957691,
     "name": "Windy Landscape",
     "author": "WOOGI1411",
-    "creators": ["WOOGI1411"],
+    "creators": [
+        "WOOGI1411"
+    ],
     "verifier": "WOOGI1411",
     "verification": "https://www.youtube.com/watch?v=hTX0Ch5bgMw",
     "percentToQualify": 50,
     "password": "696969",
-    "records": [
-        {
+    "records": []
+}
