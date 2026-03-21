@@ -23,13 +23,17 @@ export function score(rank, percent, minPercent) {
 
     let baseScore;
     const maxPoints = 350;
-    const dropPerRank = 35; // 10% of 350
+    const dropPerRank = 17.5; // 5% of 350
 
     // 3. Calculate the Base Score based on Rank
     if (rank <= 75) {
-        // This is the fix: Rank 1 gets 350, Rank 2 gets 315, etc.
-        // Math.max(50, ...) ensures we don't go below 50 points for the main list
+        // Calculation: 350 - ((rank - 1) * 17.5)
+        // #1 Windy Landscape: 350 - 0 = 350
+        // #2 Nine Circles: 350 - 17.5 = 332.5
+        // #3 Verity: 350 - 35 = 315
         baseScore = maxPoints - ((rank - 1) * dropPerRank);
+        
+        // We keep the floor at 50 so levels don't hit 0 points too early
         baseScore = Math.max(50, baseScore);
     } else {
         // Flat score for Legacy list
@@ -37,7 +41,6 @@ export function score(rank, percent, minPercent) {
     }
 
     // 4. Scale the score by the percentage achieved
-    // Formula: base * (current % - (min % - 1)) / (100 - (min % - 1))
     let finalScore = baseScore * ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
     finalScore = Math.max(0, finalScore);
 
