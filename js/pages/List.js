@@ -56,7 +56,7 @@ export default {
                         </li>
                         <li>
                             <div class="type-title-sm">Length</div>
-                            <p class="type-label-lg">{{ level.lenght || '1m 17s' }}</p>
+                            <p class="type-label-lg">{{ level.Lenght || 'No Time Set' }}</p>
                         </li>
                     </ul>
                     <h2>Records</h2>
