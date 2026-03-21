@@ -55,6 +55,10 @@ export default {
                             <p class="type-label-lg">{{ level.password || 'Free to Copy' }}</p>
                         </li>
                         <li>
+                            <div class="type-title-sm">Difficulty</div>
+                            <p class="type-label-lg">{{ level.difficulty || 'No Difficulty set' }}</p>
+                        </li>
+                        <li>
                             <div class="type-title-sm">Length</div>
                             <p class="type-label-lg">{{ level.Lenght || 'No Time Set' }}</p>
                         </li>
