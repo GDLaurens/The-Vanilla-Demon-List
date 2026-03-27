@@ -16,19 +16,12 @@
         <link rel="stylesheet" type="text/css" href="/css/typography.css" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
         <link rel="stylesheet" type="text/css" href="/css/pages/list.css" />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="/css/pages/leaderboard.css"
-        />
+        <link rel="stylesheet" type="text/css" href="/css/pages/leaderboard.css" />
         <link rel="stylesheet" type="text/css" href="/css/pages/roulette.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/nav.css" />
         <link rel="stylesheet" type="text/css" href="/css/components/btn.css" />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="/css/components/tabs.css"
-        />
+        <link rel="stylesheet" type="text/css" href="/css/components/tabs.css" />
+        
         <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
         <script src="https://unpkg.com/vue-router@4.0.14/dist/vue-router.global.prod.js"></script>
         <script type="module" src="/js/main.js"></script>
@@ -49,26 +42,28 @@
                 <router-link class="nav__tab" to="/roulette">
                     <span class="type-label-lg">Roulette</span>
                 </router-link>
-                
-                <a
-                    class="nav__cta type-label-lg"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSe1xwfO_Te_rpaxw263PB13jX72uoFRkCfZ_vF7MDRkJcA5dw/viewform?usp=publish-editor"
-                    target="_blank"
-                >Submission Rules</a>
 
                 <div class="nav__actions">
+                    <a
+                        class="nav__cta type-label-lg"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSe1xwfO_Te_rpaxw263PB13jX72uoFRkCfZ_vF7MDRkJcA5dw/viewform?usp=publish-editor"
+                        target="_blank"
+                    >Submission Rules</a>
+
                     <button
                         class="nav__icon"
                         @click.prevent="store.toggleDark()"
                     >
                         <img
                             :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'"
-                            alt=""
+                            alt="Toggle Dark Mode"
                         />
                     </button>
+
                     <a class="nav__icon" href="https://discord.gg/QfH7SWvMf5" target="_blank">
                         <img src="/assets/discord.svg" alt="Discord Logo" />
                     </a>
+
                     <a
                         class="nav__cta type-label-lg"
                         href="https://docs.google.com/forms/d/e/1FAIpQLSe1xwfO_Te_rpaxw263PB13jX72uoFRkCfZ_vF7MDRkJcA5dw/viewform?usp=publish-editor"
