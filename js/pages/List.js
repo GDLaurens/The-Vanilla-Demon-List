@@ -112,7 +112,7 @@ export default {
                     <hr style="margin: 2px 0;">
 
                     <p class="type-label-md" style="color: #eb3434; font-weight: bold; margin: 0;">
-                        These are only the main rules, to view the full rules please look in the rules channel in our Discord server.
+                        These are only the main rules, to view the full rules please click the Submission Rules button to download the Rules text file.
                     </p>
 
                     <h4 class="type-title-sm" style="margin-top: 15px;">1. Overview</h4>
