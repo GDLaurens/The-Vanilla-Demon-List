@@ -1,0 +1,148 @@
+# The Vanilla Demon List
+ 
+## Official Rulebook – Version 1.0
+ 
+---
+ 
+## 1. Overview
+ 
+The Vanilla Demon List (VDL) ranks the hardest demons completed on the official, unmodified version of Geometry Dash.
+ 
+This list exists to measure mechanical skill under official client conditions only.
+ 
+No external modifications, injected tools, or gameplay-altering utilities are permitted.
+ 
+All accepted records must strictly follow the rules outlined below.
+ 
+---
+ 
+## 2. Client Requirements
+ 
+All completions must be achieved using:
+ 
+- The official Steam release of Geometry Dash
+- Default game physics
+- No external client modifications
+ 
+### 2.1 Prohibited Modifications
+ 
+The following are strictly forbidden:
+ 
+- MegaHack (any version)
+- Geode
+- Any DLL injection
+- Any external gameplay-altering tools
+- Clickbot / macros / automation
+- Startpos Switcher
+- Texture packs or modified assets
+- Custom keybind programs
+- Overlays (Discord overlay, Nvidia overlay, RTSS, etc.)
+- Ultrawide resolutions (21:9 or wider)
+- Modified physics of any kind
+- Any modded or third-party implementations of Click Between Frames (CBF)
+ 
+Use of any prohibited modification will result in record rejection and possible removal from the list.
+ 
+---
+ 
+## 3. Allowed Features
+ 
+The following official in-game features are permitted:
+ 
+- Built-in FPS Bypass (in-game setting only)
+- Built-in in-game Click Between Frames (CBF) only
+- Practice Music Sync (In Game setting only)
+- Controller gameplay
+- Default graphics settings
+- Standard 16:9 or 16:10 resolutions
+- Windowed or fullscreen mode
+ 
+No third-party equivalents of these features are allowed.
+ 
+---
+ 
+## 4. FPS & Click Between Frames (CBF) Policy
+ 
+### 4.1 FPS Bypass
+ 
+- Only the official in-game FPS bypass setting is allowed.
+- No third-party FPS tools or external frame manipulation software may be used.
+- Game physics must remain at default values.
+ 
+FPS bypass is permitted because it is an official built-in feature of Geometry Dash.
+ 
+---
+ 
+### 4.2 Click Between Frames (CBF)
+ 
+- Only the official in-game CBF setting is allowed.
+- No modded, injected, or third-party CBF implementations are permitted.
+ 
+CBF usage is restricted as follows:
+ 
+- Players running below 120 FPS may enable CBF.
+- Players running at or above 120 FPS may not enable CBF.
+ 
+Violation of this rule will result in record rejection.
+ 
+---
+ 
+## 5. Resolution Policy
+ 
+- Only standard 16:9 or 16:10 aspect ratios are allowed.
+- Ultrawide (21:9 or wider) is prohibited.
+- Custom stretched or manipulated resolutions are not allowed.
+ 
+---
+ 
+## 6. Proof Requirements
+ 
+All records must include full, uncut raw footage. **Audible clicks or taps must be clearly heard throughout the entire completion.** Edited, clipped, or segmented recordings will not be accepted.
+ 
+---
+ 
+### 6.1 Submission Evidence (Post-Completion)
+ 
+To ensure the integrity of the run, the following must be shown in the same continuous recording immediately following the level completion:
+ 
+1. **In-Game Settings:** Open the settings menu and show all relevant tabs (specifically FPS Bypass and CBF settings).
+2. **Game Files:** Close the game and show the Geometry Dash game files directory, scrolling through the folder contents to prove no external DLLs or mod loaders (like Geode) are present.
+3. **Re-Verification:** Re-launch the game from Steam and briefly show the settings one final time to ensure no changes occurred during the closing process.
+ 
+Raw footage must be provided upon request.
+ 
+---
+ 
+## 7. Verification & Review
+ 
+The VDL moderation team reserves the right to:
+ 
+- Request additional proof at any time.
+- Conduct periodic file checks for high-ranking players.
+- Deny any record that appears suspicious.
+- Remove records if new evidence arises.
+ 
+Even if a submission technically meets listed requirements, it may be rejected if credibility cannot be established.
+ 
+All moderation decisions are final.
+ 
+---
+ 
+## 8. Enforcement
+ 
+Failure to follow these rules may result in:
+ 
+- Record rejection
+- Record removal
+- Temporary suspension
+- Permanent ban from the list
+ 
+The integrity of the Vanilla Demon List takes priority over individual records.
+ 
+---
+ 
+## 9. Philosophy
+ 
+The Vanilla Demon List exists to measure performance under official client conditions only.
+ 
+This list is not anti-mod — it is pro-vanilla competition.
